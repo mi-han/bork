@@ -1,0 +1,23 @@
+{
+  "name": "bork",
+  "version": "0.0.1",
+  "description": "Тестовый проект для BORK.",
+  "keywords": [],
+  "author": "Andrei Mikhalev",
+  "license": "ISC",
+  "devDependencies": {
+    "autoprefixer": "^9.4.7",
+    "browser-sync": "^2.26.3",
+    "del": "^3.0.0",
+    "gulp": "^4.0.0",
+    "gulp-csso": "^3.0.1",
+    "gulp-cwebp": "^3.0.0",
+    "gulp-htmlmin": "^5.0.1",
+    "gulp-jsmin": "^0.1.5",
+    "gulp-plumber": "^1.2.1",
+    "gulp-postcss": "^8.0.0",
+    "gulp-rename": "^1.4.0",
+    "gulp-sass": "^4.0.1",
+    "gulp-tinypng-compress": "^1.2.1"
+  }
+}
