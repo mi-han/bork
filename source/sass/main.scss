@@ -1,11 +1,16 @@
 @import 'fonts.scss';
 
 html {
-  background: url(../images/background-image.png) no-repeat center -150px fixed;
   background-size: cover;
   position: relative;
   width: 100%;
   height: 100%;
+}
+.webp {
+  background: url(../images/background-image.webp) no-repeat center -150px fixed;
+}
+.no-webp {
+  background: url(../images/background-image.png) no-repeat center -150px fixed;
 }
 
 body {
