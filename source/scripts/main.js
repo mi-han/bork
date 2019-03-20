@@ -15,8 +15,10 @@ const checkSupport = function() {
 
 const onWidthChange = () => {
   if (window.innerWidth < 1300) {
+    document.querySelector('body').style.backgroundPosition = 'top center';
     return document.querySelector('body').style.backgroundSize = 'auto ' + window.innerHeight + 'px';
   }
+  document.querySelector('body').style.backgroundPosition = 'center -150px';
   return document.querySelector('body').style.backgroundSize = 'cover';
 };
 onWidthChange();
