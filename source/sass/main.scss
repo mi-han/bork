@@ -84,7 +84,7 @@ body {
   height: 48px;
   box-sizing: border-box;
   padding-top: 5px; // Особенность шрифта
-  color: rgba(255, 255, 255, 0.4);
+  color: #000;
   text-align: center;
   font-family: inherit;
   font-size: 18px;
@@ -116,6 +116,12 @@ body {
     line-height: 34px;
     border-radius: 50%;
     background-color: #B40000;
+  }
+}
+.form__field--error {
+  color: #B40000;
+  &:active, &:focus {
+    color: #B40000;
   }
 }
 .form__field--success + .form__label {
@@ -221,9 +227,11 @@ body {
     background: #fff;
   }
 }
-.form__button--disabled {
+.form__button--disabled, .form__button--disabled:hover {
   border: 1px solid rgba(255, 255, 255, 0.4);
   color: rgba(255, 255, 255, 0.4);
+  background: none;
+  cursor: default;
 }
 
 @media (max-width: 626px) {
