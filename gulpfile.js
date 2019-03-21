@@ -7,7 +7,6 @@ const csso = require('gulp-csso');
 const htmlmin = require('gulp-htmlmin');
 const jsmin = require('gulp-jsmin');
 const tinypng = require('gulp-tinypng-compress');
-const cwebp = require('gulp-cwebp');
 const browserSync = require('browser-sync').create();
 const del = require('del');
 const rename = require('gulp-rename');
@@ -25,7 +24,7 @@ gulp.task('browser-sync', function() {
   gulp.watch("./source/*.html", gulp.series('html'));
   gulp.watch('./source/fonts/*.{woff, woff2}', gulp.series('fonts'));
   gulp.watch('./source/scripts/*.js', gulp.series('scripts'));
-  gulp.watch('./source/images/*.{png,jpg,jpeg}', gulp.series('tinypng', 'webp'));
+  gulp.watch('./source/images/*.{png,jpg,jpeg}', gulp.series('tinypng'));
 });
 
 // SASS -> CSS
@@ -78,14 +77,4 @@ gulp.task('tinypng', function () {
     .pipe(browserSync.stream());
 });
 
-// WEBP
-gulp.task('webp', function() {
-  del.sync('./docs/images/*.webp');
-  return gulp.src('./source/images/*.{png,jpg,jpeg}')
-    .pipe(cwebp())
-    .pipe(gulp.dest('./docs/images'))
-    .pipe(browserSync.stream());
-});
-
-gulp.task('images', gulp.series('tinypng', 'webp'));
-gulp.task('default', gulp.parallel('sass', 'html', 'fonts', 'scripts', 'images', 'browser-sync'));
+gulp.task('default', gulp.parallel('sass', 'html', 'fonts', 'scripts', 'tinypng', 'browser-sync'));

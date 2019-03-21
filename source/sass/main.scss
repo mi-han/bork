@@ -1,16 +1,11 @@
 @import 'fonts.scss';
 
 html {
+  background: url(../images/background-image.png) no-repeat center top fixed;
   background-size: cover;
   position: relative;
   width: 100%;
   height: 100%;
-}
-.webp {
-  background: url(../images/background-image.webp) no-repeat center -150px fixed;
-}
-.no-webp {
-  background: url(../images/background-image.png) no-repeat center -150px fixed;
 }
 
 body {
@@ -42,7 +37,6 @@ body {
   width: 626px;
   height: 434px;
   border-radius: 4px;
-  box-shadow: 0 2px 24px rgba(0, 0, 0, 0.9);
   background: inherit;
   &:before {
     content: '';
@@ -53,8 +47,9 @@ body {
     bottom: 0;
     background: inherit;
     filter: url(#blur);
-    filter: blur(5px);
+    filter: blur(10.48px);
     overflow: hidden;
+    background-clip: border-box;
   }
   &:after {
     content: '';
@@ -79,6 +74,7 @@ body {
   padding-top: 45px;
   padding-bottom: 45px;
   border-radius: 4px;
+  box-shadow: 0 2px 32px rgba(0, 0, 0, 0.9);
   background: rgba(240, 240, 240, 0.15);
 }
 
@@ -279,6 +275,23 @@ svg {
 
 @media (max-width: 626px) {
   .form__return-link {
+    top: 20px;
+    left: 30px;
+  }
+  .content {
+    margin-left: -200px;
+    width: 400px;
+  }
+  .form__field-block {
+    width: 340px;
+  }
+  .form__misc-block {
+    width: 300px;
+  }
+}
+
+@media (max-width: 426px) {
+  .form__return-link {
     top: 10px;
     left: 10px;
   }
@@ -290,6 +303,12 @@ svg {
     width: 240px;
   }
   .form__misc-block {
-    width: 260px;
+    width: 220px;
+  }
+  .form__remember-label {
+    font-size: 12px;
+  }
+  .form__remind-link {
+    font-size: 12px;
   }
 }
