@@ -208,7 +208,7 @@ body {
     content: "";
     position: absolute;
     top: -3px; // шрифт не хочет центрироваться нативно
-    left: 5px;
+    left: 4px;
     display: block;
     width: 22px;
     height: 16px;
@@ -224,7 +224,7 @@ body {
 
 .form__remember-field:checked + .form__remember-label {
   &:after {
-    left: 17px;
+    left: 18px;
     background: #ffffff;
   }
 }
@@ -271,6 +271,10 @@ svg {
   width: 0;
   position: absolute;
   z-index: 0;
+}
+
+input::-ms-clear {
+  display: none;
 }
 
 @media (max-width: 626px) {

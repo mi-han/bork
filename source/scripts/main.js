@@ -1,5 +1,4 @@
 const setBackgroundSize = (value) => {
-  console.log(value);
   document.querySelector('html').style.backgroundSize = value;
   document.querySelector('body').style.backgroundSize = value;
 };
